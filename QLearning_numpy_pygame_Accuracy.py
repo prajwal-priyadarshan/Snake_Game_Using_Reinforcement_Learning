@@ -9,8 +9,8 @@ Snake RL with customizable grid size and accuracy reporting:
 
 Run tips
 --------
-1) Train a Q-table policy:      python snake_qlearning_numpy_pygame.py --train --episodes 2000 --width 20 --height 20
-2) Visualize the learned policy: python snake_qlearning_numpy_pygame.py --play --width 20 --height 20
+1) Train a Q-table policy:         python QLearning_numpy_pygame_Accuracy.py --train --episodes 2000 --width 20 --height 20
+2) Visualize the learned policy:   python QLearning_numpy_pygame_Accuracy.py --play --width 20 --height 20
    (Both use ./qtable.npy by default.)
 
 Dependencies: numpy, pygame (pip install numpy pygame)
