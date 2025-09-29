@@ -1,3 +1,7 @@
+# -----------------------------
+# 4) PLAY MODE (NO EPS)
+# -----------------------------
+
 import torch
 import pygame
 from dqn import DQNAgent

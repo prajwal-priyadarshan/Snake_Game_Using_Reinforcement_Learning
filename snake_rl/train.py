@@ -1,3 +1,7 @@
+# -----------------------------
+# 3) TRAINING
+# -----------------------------
+
 import torch
 from dqn import DQNAgent
 from env import SnakeEnv

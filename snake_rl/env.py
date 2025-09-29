@@ -1,3 +1,7 @@
+# -----------------------------
+# 1) ENVIRONMENT
+# -----------------------------
+
 import random
 import numpy as np
 from dataclasses import dataclass

@@ -1,3 +1,7 @@
+# -----------------------------
+# 2) DQN + REPLAY BUFFER
+# -----------------------------
+
 import random
 from collections import deque
 import numpy as np
