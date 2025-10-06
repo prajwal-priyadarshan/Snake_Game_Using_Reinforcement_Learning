@@ -4,7 +4,6 @@
 
 import torch
 from dqn import DQNAgent
-from env import SnakeEnv
 
 def train_dqn(env, episodes=3000, max_steps=2000, save_path="dqn.pth"):
     agent = DQNAgent()
@@ -29,3 +28,7 @@ def train_dqn(env, episodes=3000, max_steps=2000, save_path="dqn.pth"):
     print(f"Model saved to {save_path}")
     print(f"Accuracy: {(success_count / episodes) * 100:.2f}%")
     return agent
+
+
+# success_count denotes how many times the snake scores successfully.
+# agent stores the value in replay buffer

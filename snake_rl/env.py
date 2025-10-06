@@ -3,13 +3,13 @@
 # -----------------------------
 
 import random
-import numpy as np
-from dataclasses import dataclass
+import numpy as np # for state representation
+from dataclasses import dataclass # to store result of each step
 from typing import List, Tuple
 
 DIRS = [(0, -1), (1, 0), (0, 1), (-1, 0)]
 UP, RIGHT, DOWN, LEFT = 0, 1, 2, 3
-Action = int  # 0=Forward, 1=TurnLeft, 2=TurnRight
+Action = int  # 0 = Forward, 1 = TurnLeft, 2 = TurnRight
 
 @dataclass
 class StepResult:
@@ -108,4 +108,6 @@ class SnakeEnv:
             moving[UP], moving[RIGHT], moving[DOWN], moving[LEFT],
             food_up, food_right, food_down, food_left
         ]
+        
         return np.array(bits, dtype=np.float32)
+    

@@ -50,3 +50,6 @@ def play_with_dqn(env, model_path="dqn.pth", fps=12, cell=30):
             pygame.time.delay(500)
             s = env.reset()
     pygame.quit()
+
+
+# currently not required

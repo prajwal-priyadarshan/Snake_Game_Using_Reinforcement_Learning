@@ -15,13 +15,13 @@ st.title("Snake RL - DQN Visualization")
 # Sidebar options
 # -----------------------------
 model_path = st.sidebar.text_input("Trained Model Path", "dqn.pth")
-grid_width = st.sidebar.number_input("Grid Width", min_value=10, max_value=40, value=20)
+grid_width = st.sidebar.number_input("Grid Width", min_value=10, max_value=60, value=20)
 grid_height = st.sidebar.number_input("Grid Height", min_value=10, max_value=40, value=20)
 cell_pixels = st.sidebar.number_input("Cell Size (px)", min_value=10, max_value=50, value=25)
 fps = st.sidebar.slider("FPS (Game speed)", min_value=1, max_value=30, value=10)
 
 level = st.sidebar.selectbox("Select Level (Initial Snake Size)", ["Level 1", "Level 2", "Level 3"])
-level_sizes = {"Level 1": 3, "Level 2": 5, "Level 3": 7}
+level_sizes = {"Level 1": 3, "Level 2": 6, "Level 3": 9}
 initial_snake_size = level_sizes[level]
 
 start_button = st.sidebar.button("Start Game")
