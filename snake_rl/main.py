@@ -9,8 +9,8 @@ Snake RL with DQN (Deep Q-Network) + Replay Buffer + Target Network + Reward Sha
 • Accuracy: Reports % of episodes where the snake successfully eats at least one food item
 
 Run Tips:
-    1) Train: python SnakeGame_DQN_PyTorch_Pygame.py --train --episodes 2000 --width 20 --height 20
-    2) Play:  python SnakeGame_DQN_PyTorch_Pygame.py --play  --width 20 --height 20
+    1) Train: python main.py --train --episodes 2000 --width 20 --height 20
+    2) Play:  python main.py --play  --width 20 --height 20
 
 Dependencies: numpy, pygame, torch
 
@@ -21,7 +21,6 @@ While testing we got a accuray of 99.25%, with training of 2000 episodes
 # 5) MAIN
 # -----------------------------
 
-
 import argparse
 from env import SnakeEnv
 from train import train_dqn
@@ -31,7 +30,7 @@ def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--train", action="store_true")
     p.add_argument("--play", action="store_true")
-    p.add_argument("--episodes", type=int, default=3000)
+    p.add_argument("--episodes", type=int, default=2000)
     p.add_argument("--width", type=int, default=20)
     p.add_argument("--height", type=int, default=20)
     return p.parse_args()

@@ -9,6 +9,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+# This is the neural network that predicts Q-values (expected rewards) for each possible action
 class DQN(nn.Module):
     def __init__(self, input_dim=11, output_dim=3):
         super().__init__()
@@ -21,6 +22,7 @@ class DQN(nn.Module):
     def forward(self, x):
         return self.net(x)
 
+# Used to store past experience of [state, action, reward, next_state, done(whether the game is done)]
 class ReplayBuffer:
     def __init__(self, capacity=10000):
         self.buffer = deque(maxlen=capacity)
@@ -36,6 +38,7 @@ class ReplayBuffer:
     def __len__(self):
         return len(self.buffer)
 
+# Main brain
 class DQNAgent:
     def __init__(self, state_dim=11, action_dim=3, lr=1e-3, gamma=0.9,
                  eps=1.0, eps_min=0.05, eps_decay=0.995, buffer_size=10000):
@@ -85,3 +88,8 @@ class DQNAgent:
         self.learn_step += 1
         if self.learn_step % self.update_target_steps == 0:
             self.target_net.load_state_dict(self.q_net.state_dict())
+
+
+# gamma → discount factor (how much future rewards matter).
+# eps (epsilon) → exploration rate.
+# buffer → replay memory to store experiences
